@@ -1,0 +1,50 @@
+{
+    "name": "Ban All Bot",
+    "description": "Telegram Ban All Bot By Aruack",
+    "logo": "https://telegra.ph/file/71e1c80c374fc803a2028.jpg",
+    "repository": "https://github.com/Aruack/BanallBot",
+    "logo": "",
+    "keywords": [
+        "python",
+        "telegram"
+    ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+     },
+       "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "BOT TOKEN",
+            "value": "",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get from https://my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get from https://my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "SUDO": {
+            "description": "SUDO USERS.",
+            "value": "",
+            "required": true
+        }
+    }
+}
